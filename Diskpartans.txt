@@ -1,0 +1,10 @@
+select disk 0
+clean
+create partition primary size=100
+select partition 1
+format fs=ntfs quick label=system
+active
+create partition primary
+select partition 2
+format fs=ntfs quick label=windows
+assign letter=g
